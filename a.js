@@ -1,20 +1,15 @@
-function max(height){
-    let left = 0;
-    let right = height.length - 1;
-    let maxWater = 0;
+const arr = [1,1,2,4,4,5]
 
-    while(left < right){
-        const width = right - left;
-        const currHeight = Math.min(height[left],height[right])
-        const area = width * currHeight;
-        maxWater = Math.max(maxWater,area)
+const a1 = [...new Set(arr)]
+console.log(a1)
 
-        if(height[left] < height[right]){
-            left++;
-        } else {
-            right++
-        }
+const a2 = Array.from(new Set(arr))
+console.log(a2)
+
+const map = new Map()
+const a3 = []
+for(let i = 0; i < arr.length; arr++){
+    if(!map.has(arr[i])){
+        map.set()
     }
-
-    return maxWater;
 }
